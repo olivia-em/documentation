@@ -51,8 +51,20 @@
         src="../assets/collex/collex_cover.jpg"
         alt="Collected Exorcisms Cover"
       />
-      <h2>Statement:</h2>
-      <p></p>
+      <h2>Statement / Book Preface:</h2>
+      <div class="expand">
+        <p>I’ve been writing this book for years, long before the idea itself crossed my mind. Partly because I had to live all of these moments in order to write about them, but also because some of these poems have existed for a while. I wrote my first collection of poems in 2023, and my first web poetry collection in 2024, which contain the earlier versions of Parthenogenesis and justBones respectively. For me, writing poetry is a way to process my emotions and relationships: the act of figuring out the right arrangement of words can make everything make sense.</p> 
+        <p>In the second half of 2024, a series of close encounters with men of a similar disposition played out, with very little time in between to process them. In early 2025, I was broken-hearted, but still open-hearted, and I allowed the same relationship treatment to play out again, and again, and again. September & October of 2025: three horrible weeks and the return of three versions of that same kind of man… four actually, but I was in denial at the time. The common thread was that, regardless of how I’d been treated in the past, I revealed how much I still cared. Then I was shamed for caring, and in some cases punished. I had so much anxiety and insecurity and no space to process, so of course my mental & physical health took a very sharp decline.</p> 
+        <p>After that I knew I couldn’t keep repeating the same pattern into eternity; I was trying to reenact my past in an effort to rewrite it… and how is that fair to my present? To my future? In that time, Collected Exorcisms emerged conceptually. I wanted to allow myself a dedicated space to process all the grief I’d been carrying from eleven different relationships. Let me define “relationship,” so you don’t misunderstand: it’s that thing you have with the people in your life who are important to you… friendship, family, romance. I’m not shy of the word love. I loved them, I love them. (Well, all but three.)</p> 
+        <p>I had an outline of the people and experiences I wanted to write about, but I also knew that as I reached the end, my perspectives would change and maybe new things would come up (and they did), so I didn’t think too much about what the final product would look like. Because I didn’t know what I would look like either.</p> 
+        <p>I collected 412 photos from my camera roll, all related to these people. Rather, they were an archive of myself during them. I used the photos for physical and digital collages, to decontextualize and recontextualize. I took handwritten notes and screenshots, I made web art projects, music, and video art. And I wrote. Everytime I sat down to make something, I was thinking about one of these people or periods in my life, as well as how they sit in relation to one another. Every poem I wrote was inspired by the one that came before. Every word, every image, is intentionally arranged, from the smallest unit to the largest. I wanted to tear my memories apart and layer them until there was some new understanding or hidden truth. It’s my great big puzzle. I hoped by creating this, I could make sense of them, of their choices, and therefore make sense of myself. And then eventually… acceptance? Closure? And if I can’t have closure, maybe I could learn how to choose something different for myself.</p>
+        <p>The order of the book is only semi-chronological because the path towards closure involves complex and often non-linear work. Sometimes you have to take a step back in order to move forward. Sometimes more than one.</p>
+        <p>This is the most personal thing I’ve ever done, but also is intentionally vague. These poems blend together and begin to sound the same. Because the eleven subjects aren’t really that different from each other… if they’re even the subjects at all.</p> 
+        <p>I have been treated like an object so consistently that it took me until the end to realize the obvious.</p>
+      </div>
+      <button class="expand-toggle" type="button" aria-expanded="false">
+        Read more
+      </button>
       <h2>Ideation:</h2>
       <p>
         I knew I wanted to write a poetry collection as well as some sort of web
@@ -241,5 +253,19 @@
         <li>Marlon Evans</li>
       </ul>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const expandable = document.querySelector(".expand");
+        const toggle = document.querySelector(".expand-toggle");
+
+        if (!expandable || !toggle) return;
+
+        toggle.addEventListener("click", function () {
+          const expanded = expandable.classList.toggle("is-expanded");
+          toggle.textContent = expanded ? "Read less" : "Read more";
+          toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+        });
+      });
+    </script>
   </body>
 </html>
